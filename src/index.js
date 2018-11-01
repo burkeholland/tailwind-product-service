@@ -4,8 +4,8 @@ const Hapi = require("hapi");
 const server = Hapi.server({
   host: process.env.HOSTNAME || "localhost",
   port: process.env.PORT || 8000,
-  cors: {
-    origin: [process.env.FRONTEND || "*"]
+  routes: {
+    cors: true
   }
 });
 
